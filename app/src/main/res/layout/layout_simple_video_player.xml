@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/player_ui_statusbar_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00000000"
+        android:visibility="gone"
+        tools:layout_height="20dp"
+        tools:visibility="visible" />
+
+
+    <View
+        android:id="@+id/player_ui_navbar_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/player_ui_statusbar_placeholder"
+        android:background="#00000000"
+        android:visibility="gone"
+        tools:layout_width="50dp"
+        tools:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/player_ui_statusbar_placeholder"
+        android:layout_toLeftOf="@id/player_ui_navbar_placeholder">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#90000000"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:ellipsize="end"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:text="视频标题"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/player_ui_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="速度"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="高清"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#90000000"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/player_ui_play_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="16dp"
+                android:text="播放"
+                android:textColor="@android:color/white" />
+
+            <SeekBar
+                android:id="@+id/player_ui_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/player_ui_play_fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:padding="16dp"
+                android:text="全屏"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
